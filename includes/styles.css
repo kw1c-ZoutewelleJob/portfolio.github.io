@@ -1,0 +1,574 @@
+/* Lettertypen */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Algemene Stijlen */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: rgb(255,0,0);
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #FFFFFF;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  color: var(--primary-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navigatie */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #eeeeee;
+  z-index: 99;
+  text-align: center;
+  box-shadow: 0 0 9px #ff0000;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo {
+  max-width: 130px;
+  width: 100%;
+}
+
+nav .logo a {
+  display: block; 
+}
+
+nav .logo img {
+  width: 100%;
+  height: auto;
+  margin: 0; 
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Secties */
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.github,
+.portfolio {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.github:hover,
+.portfolio:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  box-shadow: 0 1px 10px #ff0000;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img
+{
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+.about-container {
+  display: flex;
+  margin-top: 15vh;
+}
+
+.about-content {
+  flex: 1;
+  padding:  0 2rem 0 2rem 
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Updated to a column layout */
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%; 
+}
+/* Over mij Sectie */
+.about_me {
+  width: 100%;
+  padding: 200px 0px;
+  background-color: #ffffff;
+  position: relative;
+  background-image: url(../images/codebackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 120vh;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+.about_me::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px; /* Pas de breedte van de cirkel aan */
+  height: 700px; /* Pas de hoogte van de cirkel aan */
+  background-color: #eeeeee; /* Pas de achtergrondkleur van de cirkel aan */
+  border-radius: 50%;
+}
+
+.about-text {
+  width: 550px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Plaats de tekst en de knop boven de cirkel */
+}
+
+.main {
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-text h2 {
+  color: rgb(0, 0, 0);
+  font-size: 75px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.about-text h5 {
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+.about-text p {
+  color: var(--text-light);
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.btn2 {
+  background-color: rgb(255, 0, 0);
+  color: #FFFFFF;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 30px;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1; 
+}
+
+.btn2:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid rgb(255, 0, 0);
+  box-shadow: 0 1px 10px #ff0000;
+  cursor: pointer;
+}
+
+/* Diavoorstelling Sectie */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mySlides {
+  display: none; /* Set slides to none by default */
+}
+.mySlides.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+#dots {
+  margin-top: 1rem; /* Adjust margin as needed */
+  text-align: center;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Voettekst */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+  background: #101010;
+}
+
+footer p:nth-child(1) {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+footer p:nth-child(2),
+footer p:nth-child(3),
+footer p:nth-child(4),
+footer p:nth-child(5) {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Sociale Media Pictogrammen */
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+.social a:hover {
+  transform: scale(1.3);
+  transition: 0.4s;
+}
+
+/* Einde Opmerking */
+.end
+ {
+  color: rgb(200, 0, 0);
+  bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+/* Media Query voor Schermgrootte Kleiner dan 750px */
+@media screen and (max-width: 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  nav .nav__content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  nav input#check:checked ~ ul {
+    display: flex;
+  }
+  ul li a:hover {
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+  
+  ul li a:hover, ul li a.navhover {
+    color: var(--primary-color);
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .about-text h2 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+  .section__container {
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+    margin-top: 15vh;
+  }
+
+  .action__btns {
+    margin: 0 0 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action__btns button {
+    margin-bottom: 1rem;
+  }
+
+  .about_me::before {
+    width: 100vw; /* Pas de breedte van de cirkel aan */
+    height: 600px; /* Pas de hoogte van de cirkel aan */
+    border-radius: 20px;
+  }
+  .about_me
+  {
+    background-image: none;
+    padding: 0 0 50px 0;
+    margin: 0 0 10vh 0;
+  }
+  .about-container {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .about-content {
+    order: 1; /* Move text above image */
+    margin: 20vh 0 0 0;
+  }
+
+  .image-container {
+    order: 2; /* Move image below text */
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .mySlides {
+    display: grid;
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dot {
+    margin-top: 0.5rem;
+  }
+  
+  #dots {
+    margin-top: 0.5rem;
+  }
+
+}
+ 
